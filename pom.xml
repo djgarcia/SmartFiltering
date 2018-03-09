@@ -6,7 +6,7 @@
     <version>1.0</version>
     <inceptionYear>2018</inceptionYear>
     <properties>
-        <app.main.class>org.apache.spark.feature.Main</app.main.class>
+        <app.main.class>org.apache.spark.mllib.feature.Main</app.main.class>
         <maven.compiler.source>1.6</maven.compiler.source>
         <maven.compiler.target>1.6</maven.compiler.target>
         <encoding>UTF-8</encoding>
@@ -65,7 +65,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>org.apache.spark.feature.Main</mainClass>
+                            <mainClass>org.apache.spark.mllib.feature.Main</mainClass>
                         </manifest>
                     </archive>
                 </configuration>

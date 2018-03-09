@@ -1,4 +1,4 @@
-package org.apache.spark.feature
+package org.apache.spark.mllib.feature
 
 import org.apache.spark.mllib.classification.kNN_IS.kNN_IS
 import org.apache.spark.mllib.regression.LabeledPoint

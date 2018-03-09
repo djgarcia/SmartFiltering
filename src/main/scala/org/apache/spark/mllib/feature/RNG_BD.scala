@@ -1,10 +1,10 @@
-package org.apache.spark.feature
+package org.apache.spark.mllib.feature
 
-import org.apache.spark.feature.Keel.NCNEdit
+import org.apache.spark.mllib.feature.Keel.RNG
 import org.apache.spark.mllib.regression.LabeledPoint
 import org.apache.spark.rdd.RDD
 
-class NCNEdit_BD(val data: RDD[LabeledPoint], val k: Int = 1) extends Serializable {
+class RNG_BD(val data: RDD[LabeledPoint], val order: Boolean = true, val selType: Boolean = true) extends Serializable {
 
   def runFilter(): RDD[LabeledPoint] = {
 
@@ -13,7 +13,7 @@ class NCNEdit_BD(val data: RDD[LabeledPoint], val k: Int = 1) extends Serializab
       val dataAsArray = peristPartition.map(_.features.toArray)
       val classes = peristPartition.map(_.label.toInt)
 
-      val selectedData = new NCNEdit(dataAsArray, classes, k).ejecutar()
+      val selectedData = new RNG(dataAsArray, classes, order, selType).ejecutar()
 
       val filteredData = peristPartition.zipWithIndex.filter { x =>
         selectedData(x._2)

@@ -1,4 +1,4 @@
-package org.apache.spark.feature.Keel;
+package org.apache.spark.mllib.feature.Keel;
 
 import java.util.Arrays;
 
