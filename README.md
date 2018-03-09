@@ -53,7 +53,7 @@ import org.apache.spark.mllib.feature._
 
 val rng_bd_model = new RNG_BD(trainingData, // RDD[LabeledPoint]
                               order, // Order of the graph (true = first, false = second)
-                              selType) // Selection type (true = edit, false = condensation)
+                              selType) // Selection type (true = edition, false = condensation)
 
 val rng_bd = rng_bd_model.runFilter()
 ```
